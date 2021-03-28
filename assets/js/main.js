@@ -205,15 +205,7 @@ var Owl = {
 
 // 
 
-$(".modalFilterbtn").click(function(){
-  $(".filterModal").toggle();
-});
-$(".modalFilterbtn").click(function(){
-    // $(".fabricModal").addClass("bd-example-modal-lg");
-    $(".fabricModal").toggleClass("bd-example-modal-lg");
-    // $(".modal-dialog").addClass("modal-lg");
-    $(".modal-dialog").toggleClass("modal-lg");
-});
+
 
 //owl
 

@@ -1,4 +1,19 @@
-// filter
+// filte
+
+
+$(".modalFilterbtn").click(function(){
+  $(".filterModal").toggle();
+});
+
+$('.modalFilterbtn').click(function(){
+	$('#mymodal2').modal({show:true});
+})
+$(".modalFilterbtn").click(function(){
+    // $(".fabricModal").addClass("bd-example-modal-lg");
+    $(".modal-content-1").toggleClass("modalpullRight");
+    // $(".modal-dialog").addClass("modal-lg");
+    // $(".modal-dialog").toggleClass("modal-lg");
+});
 
 var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
 var allRadio = document.querySelectorAll('input[type=radio]');

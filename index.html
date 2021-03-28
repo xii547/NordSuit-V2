@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nortsmen</title>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+<!--    <link href="assets/css/perfect-scrollbar.css" rel="stylesheet">-->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body onload="check()">
+
+<div class="customization-section">
+    <div class="progressbar-reports">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-11 offset-lg-1">
+                    <div class="progress-reports-bar">
+                        <ul>
+                            <li class="progressType1 active" data="0">
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="PICK STITCHING">
+                                    <span class="bar1 bar-check active"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Jacket Type</span>
+                                </a>
+                            </li>
+                            <li class="progressType2 " data="1">
+                                <a href="#"><span class="bar2 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Lapels</span></a>
+                            </li>
+                            <li class="progressType2 " data="3">
+                                <a href="#"><span class="bar3 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Fittings</span></a>
+                            </li>
+                            <li class="progressType3 " data="4">
+                                <a href="#"><span class="bar4 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Breast Pockets</span></a>
+                            </li>
+                            <li class="progressType4 " data="5">
+                                <a href="#"><span class="bar5 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Pockets</span></a>
+                            </li>
+                            <li class="progressType5 " data="6">
+                                <a href="#"><span class="bar6 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Sleeve Buttons</span></a>
+                            </li>                           
+                            <li class="progressType6 " data="7">
+                                <a href="#"><span class="bar7 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span>Vents</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="app">
+
+
+
+    <div class="customization-section">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="title-content">
+                        <h1>Blue Double breasted checked 100% Wool Suit</h1>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="price-details">
+                        <p class="pricetag"><span>Total Cost:</span> $650</p>
+                        <a href="#" class="btnlink">Change Style</a>
+                    </div>
+
+                    <!-- current selected design details -->
+
+                    <button type="button" class="btn btn-primary customModal" data-toggle="modal" data-target="#Mymodal" @click="modalFunction()">
+                      Your Current Customization
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="Mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Your Customization</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="container">
+                                  <h2>Your Customization</h2>        
+                                      <table class="table table-condensed">
+                                        <thead>
+                                          <tr>
+                                            <th>Type</th>
+                                            <th>Selection</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>Jacket Type</td>
+                                            <td>{{ stylePicked }}</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Lapel</td>
+                                            <td>{{ lapelPicked }}</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Fittings</td>
+                                            <td>{{ fittingPicked }}</td>
+                                          </tr>                                          
+                                          <tr>
+                                            <td>Breastpocket</td>
+                                            <td>{{ bpocketPicked }}</td>
+                                          </tr>                                          
+                                          <tr>
+                                            <td>Pocket</td>
+                                            <td>{{ pocketPicked }}</td>
+                                          </tr>                                          
+                                          <tr>
+                                            <td>Sleeve Button</td>
+                                            <td>{{ bsbuttonPicked }}</td>
+                                          </tr>                                          
+                                          <tr>
+                                            <td>Vent</td>
+                                            <td>{{ ventPicked }}</td>
+                                          </tr>
+                                        </tbody>
+                                  </table>
+                            </div>
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button onclick="location.href = 'https://northsmen.com/checkout#/';" type="button" class="btn btn-primary">Proceed to Checkout</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="customization-slide owl-carousel owlCarousel" id="myCarousel"> 
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jakect Type</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                                <label class="single-item-box"  v-for="variant in stylevariants"
+                                                                                                :key="variant.variantId">
+
+
+                                        <div class="box" id="jstyles"  @click="updateProduct(variant.variantId) " >
+
+                                            <input type="radio" name="styles" :id="variant.variantId" class="Svariant" :value="variant.variantType" >
+
+                                            <div class="box1">
+
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ variant.variantType }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+
+                                            </div>
+                                        </div>
+                                </label>
+
+                            </div>
+                        </div>
+
+
+                        <!-- end customization content div-->
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jakect Lapels</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in lapelvariants"
+                                                                                            :key="variant.variantId">
+
+
+
+                                    <div class="box" id="jlapels" @click="updateProduct(variant.variantImage) " >
+
+                                        <input type="radio" name="lapels" :id="variant.variantId" class="Lvariant" :value="variant.variantType" >
+
+                                        <div class="box1">   
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div>
+
+                        <!-- end customization content div-->                        
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jakect Fittings</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in fittingvariants"
+                                                                                            :key="variant.variantId" >
+
+
+                                    <div class="box" id="jfittings" @click="updateProduct(variant.variantImage) " >
+                                        <input type="radio" name="fittings" :id="variant.variantId" :value = "variant.variantType">
+
+                                        <div class="box1">
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div>
+
+
+                        <!-- end customization content div-->
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jacket Breast Pockets</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in breastpocketvariants"
+                                                                                            :key="variant.variantId">
+
+                                    <div class="box" id="jbpockets" @click="updateProduct(variant.variantImage) " >
+                                        <input type="radio" name="breastpockets" :id="variant.variantId" :value = "variant.variantType">
+
+                                        <div class="box1">
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div>
+
+
+                        <!-- end customization content div-->
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jakect Pockets</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in pocketvariants"
+                                                                                            :key="variant.variantId">
+
+                                    <div class="box" id="jpockets" @click="updateProduct(variant.variantImage) " >
+                                        <input type="radio" name="pockets" :id="variant.variantId" :value = "variant.variantType">
+
+                                        <div class="box1">
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div>
+
+
+                        <!-- end customization content div-->
+
+
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jakect Sleeve Buttons</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                                <label class="single-item-box"  v-for="variant in sleevebuttonvariants"
+                                                                                                :key="variant.variantId">
+
+
+                                        <div class="box" id="jbsbuttons"  @click="updateProductB(variant.variantImage) " >
+
+                                            <input type="radio" name="sleevebuttons" :id="variant.variantId" :value = "variant.variantType">
+
+                                            <div class="box1">
+
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ variant.variantType }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+
+                                            </div>
+                                        </div>
+                                </label>
+
+                            </div>
+                        </div>
+
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Jakect Vents</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                                <label class="single-item-box"  v-for="variant in ventvariants"
+                                                                                                :key="variant.variantId">
+
+
+                                        <div class="box" id="jbvents"  @click="updateProductV(variant.variantImage) " >
+
+                                            <input type="radio" name="vents" :id="variant.variantId" :value = "variant.variantType">
+
+                                            <div class="box1">
+
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ variant.variantType }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+
+                                            </div>
+                                        </div>
+                                </label>
+
+                            </div>
+                        </div>     
+                                                    
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>Your Selection</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                                <label class="single-item-box" >
+                                    <div class="box" id="styleFinal"  data="0">
+                                        <input type="radio" name="updateF" id="styleF" class="updateF" :value = "stylePicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ stylePicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label> 
+
+                                <label class="single-item-box"  data="1">
+                                    <div class="box" id="lapelFinal"  >
+                                        <input type="radio" name="updateF" id="lapelF" class="updateF"  :value = "lapelPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ lapelPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>        
+
+                                <label class="single-item-box" data="2">
+                                    <div class="box" id="fittingFinal"  >
+                                        <input type="radio" name="updateF" id="fittingF" class="updateF"  :value = "fittingPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ fittingPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>          
+
+                                <label class="single-item-box" data="3">
+                                    <div class="box" id="bpocketFinal"  >
+                                        <input type="radio" name="updateF" id="bpocketF" class="updateF"  :value = "bpocketPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ bpocketPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>                                       
+
+                                <label class="single-item-box" data="4">
+                                    <div class="box" id="pocketFinal"  >
+                                        <input type="radio" name="updateF" id="pocketF" class="updateF"  :value = "pocketPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ pocketPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>                                     
+
+                                <label class="single-item-box" data="5">
+                                    <div class="box" id="buttonFinal"  >
+                                        <input type="radio" name="updateF" id="buttonF" class="updateF"   :value = "bsbuttonPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ bsbuttonPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>                                       
+
+                                <label class="single-item-box" data="6">
+                                    <div class="box" id="ventFinal"  >
+                                        <input type="radio" name="updateF" id="ventF" class="updateF"   :value = "ventPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ ventPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>     
+                          </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                <!-- carousel end -->
+
+                    <button class="owlPrev owlBtn  btn btn-primary" id="owlPrev">Prev</button>
+                    <button class="owlNext owlBtn btn btn-primary" id="owlNext">Next</button>
+                    <button type="submit " class="owlSubmit owlBtn btn btn-primary" id="owlSubmit"> Finalize Your Customization</button>
+                    <button class="owlUpdate owlBtn btn btn-primary " id="owlUpdate">Update</button>
+                    <button class="updateC owlBtn btn btn-primary " id="updateC">Update</button>
+
+
+                <!-- PROGRESS BAR (experimental) -->
+
+<!--                     <div class="row">
+                        
+                        <div class="progress" style="width: 100%">
+                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" style="width: 14.28%;">
+                             </div>
+                        </div>
+
+                    </div> -->
+
+
+
+                </div>
+                <div class="col-lg-5">
+                    <div class="ct-preview-box clearfix">
+                        <div class="single-preview-img">
+
+
+                            <!-- preview image parts -->
+
+
+                            
+                            <div  id="frontImg" class="activeC frontCarousel cDisplay">
+                                <div class="modelFront">
+                                    <img class="modelHead modelImg"src="imge/front/carlos.png">
+                                    <img class="modelImg" src="imge/front/shirt_to_jacket_open.png">
+                                    <img class="modelPant modelImg" src="imge/front/length_longcut_slim.png">
+                                    <img class="modelShoe modelImg" src="imge/front/zapatos.png">
+
+                                </div>
+                                <div class="styles">
+                                    <img class="modelImg" v-bind:src="styles">
+                                    <img class="modelImg" style="display: none;" :src= "stylesx">
+                                </div>  
+
+                                <div class="fittings">
+                                    <img class="modelImg" :src="fittings">
+                                </div>
+
+                                <div class="lapels">
+                                    <img class="modelImg" class="modelImg" :src="lapels">
+                                </div>
+
+                                <div class="bottom">
+                                    <img class="modelImg" :src="bottom">
+                                </div>      
+                                
+                                <div class="sleeves">
+                                    <img class="modelImg" :src="sleeves">
+                                </div>  
+
+                                <div class="breastpocket">
+                                    <img class="modelImg" :src="breastpockets">
+                                </div>  
+
+                                <div class="pocket">
+                                    <img class="modelImg" :src="pockets">
+                                    <img class="modelImg" :src="pocketsx">
+                                </div>  
+                            </div>
+
+
+
+
+                            <div class="backCarousel cDisplay" id="backImg">
+
+                                <div class="modelBack">
+                                    <img class="modelBImg modelHead" src="imge/back/model/carlos.png">
+                                    <img class="modelBImg " src="imge/back/model/shirt_to_jacket.png">
+                                    <img class="modelBImg modelShoe" src="imge/back/model/zapatos.png">
+                                    <img class="modelBImg modelPant" src="imge/back/model/length_long+cut_slim.png">
+                                </div>
+
+                                <div class="bstyles">
+                                    <img class="modelBImg" :src="bstyles">
+                                </div>
+
+                                <div class="bfittings">
+                                    <img class="modelBImg" :src="bfittings">
+                                </div>
+
+                                <div class="bbottom">
+                                    <img class="modelBImg" :src="bbottom">
+                                </div>
+
+                                <div class="bsleeves">
+                                    <img class="modelBImg" :src="bsleeves">
+                                    <img class="modelBImg" :src="bsbuttons">
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="ct-multi-img">
+                            <div class="side-preview offC">
+                                <img src="./assets/img/customization/front-img.jpg" alt="multiple img">
+                                <span>Front Preview</span>
+                            </div>
+                            <div class="side-preview"><img src="./assets/img/customization/back-img.jpg" alt="multiple img">
+                                <span>Side Preview</span>
+                            </div>
+                            <div class="side-preview onC"><img src="./assets/img/customization/back-img.jpg" alt="multiple img">
+                                <span>Back Preview</span>
+                            </div>
+                            <div class="side-preview" data-toggle="modal" data-target="#exampleModal"><img src="./assets/img/Fabric.jpg" alt="multiple img">
+                                <span>Fabric details</span>
+                            </div>
+
+
+
+
+                            <!-- fabric Modal -->
+
+
+                            <div class="modal left fade fabricModal bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Select Fabric</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="text-align: center; padding-bottom: 20px;">
+                                                <button type="button" class="modalFilterbtn btn btn-secondary">filter</button>  
+                                            </div>
+                                            <div class="containerModal">
+                                                <div class="filterModal" style="display: none;">
+                                                    <div class="container">
+                                                          <h3>Type</h3>
+                                                          <div class="filter-options">
+                                                            <div><input type="checkbox" name="type" value="new" id="new"><label for="new">new</label></div>
+                                                            <div><input type="checkbox" name="type" value="faves" id="faves"><label for="faves">faves</label></div>
+                                                            <div><input type="checkbox" name="type" value="basic" id="basic"><label for="basic">basic</label></div>
+                                                            <div><input type="checkbox" name="type" value="limitedEdition" id="limitedEdition"><label for="limitedEdition">limited edition</label></div>
+                                                            <div><input type="checkbox" name="type" value="premium" id="premium"><label for="premium">premium</label></div>
+                                                          </div>
+                                                    
+                                                          <h3>Color</h3>
+                                                          <div class="filter-options">
+                                                            <div><input type="radio" name="color" value="black" id="black"><label for="black">black</label></div>
+                                                            <div><input type="radio" name="color" value="blue" id="blue"><label for="blue">blue</label></div>
+                                                            <div><input type="radio" name="color" value="grey" id="grey"><label for="grey">grey</label></div>
+                                                            <div><input type="radio" name="color" value="brown" id="brown"><label for="brown">brown</label></div>
+                                                            <div><input type="radio" name="color" value="white" id="white"><label for="white">white</label></div>
+                                                            <div><input type="radio" name="color" value="beige" id="beige"><label for="beige">beige</label></div>
+                                                            <div><input type="radio" name="color" value="yellow" id="yellow"><label for="yellow">yellow</label></div>
+                                                            <div><input type="radio" name="color" value="pink" id="pink"><label for="pink">pink</label></div>
+                                                            <div><input type="radio" name="color" value="green" id="green"><label for="green">green</label></div>
+                                                            <div><input type="radio" name="color" value="red" id="red"><label for="red">red</label></div>
+                                                          </div>
+                                                    
+                                                          <h3>Material</h3>
+                                                          <div class="filter-options">
+                                                            <div><input type="checkbox" name="material" value="wool" id="wool"><label for="wool">wool</label></div>
+                                                            <div><input type="checkbox" name="material" value="linen" id="linen"><label for="linen">linen</label></div>
+                                                            <div><input type="checkbox" name="material" value="tweed" id="tweed"><label for="tweed">tweed</label></div>
+                                                            <div><input type="checkbox" name="material" value="cotton" id="cotton"><label for="cotton">cotton</label></div>
+                                                            <div><input type="checkbox" name="material" value="velvet" id="velvet"><label for="velvet">velvet</label></div>
+                                                            <div><input type="checkbox" name="material" value="corduroy" id="corduroy"><label for="corduroy">corduroy</label></div>
+                                                            <div><input type="checkbox" name="material" value="polyester" id="polyester"><label for="polyester">polyester</label></div>
+                                                            <div><input type="checkbox" name="material" value="seersucker" id="seersucker"><label for="seersucker">seersucker</label></div>
+                                                            <div><input type="checkbox" name="material" value="stretchy" id="stretchy"><label for="stretchy">stretchy</label></div>
+                                                            <div><input type="checkbox" name="material" value="wooldBlends" id="wooldBlends"><label for="wooldBlends">woold blends</label></div>
+                                                          </div>
+                                                          <h3>Pattern</h3>
+                                                          <div class="filter-options">
+                                                            <div><input type="checkbox" name="pattern" value="plain" id="plain"><label for="plain">plainern</label></div>
+                                                            <div><input type="checkbox" name="pattern" value="striped" id="striped"><label for="striped">stripedern</label></div>
+                                                            <div><input type="checkbox" name="pattern" value="checked" id="checked"><label for="checked">checkedern</label></div>
+                                                            <div><input type="checkbox" name="pattern" value="houndstooth" id="houndstooth"><label for="houndstooth">houndstoothern</label></div>
+                                                            <div><input type="checkbox" name="pattern" value="paisley" id="paisley"><label for="paisley">paisleyern</label></div>
+                                                            <div><input type="checkbox" name="pattern" value="herrington" id="herrington"><label for="herrington">herringtonern</label></div>
+                                                          </div>
+                                                          <h3>Season</h3>
+                                                          <div class="filter-options">
+                                                            <div><input type="checkbox" name="season" value="summer" id="summer"><label for="summer">summer</label></div>
+                                                            <div><input type="checkbox" name="season" value="yearRound" id="yearRound"><label for="yearRound">year round</label></div>
+                                                            <div><input type="checkbox" name="season" value="winter" id="winter"><label for="winter">winter</label></div>
+                                                          </div>
+                                                      </div>
+                                                </div>
+                                                <div class="modalmainContainer">
+                                                      <div class=" filter new black wool plain summer">
+                                                        <img src="assets/img/fabric-demo/1.jpg">
+                                                        <p>option 1</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter faves black wool plain summer">
+                                                        <img src="assets/img/fabric-demo/2.jpg">
+                                                        <p>option 2</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter basic black wooldBlends plain summer">
+                                                        <img src="assets/img/fabric-demo/3.jpg">
+                                                        <p>option 3</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter limitedEdition black wool plain yearRound">
+                                                        <img src="assets/img/fabric-demo/4.jpg">
+                                                        <p>option 4</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter premium black wooldBlends plain winter">
+                                                        <img src="assets/img/fabric-demo/5.jpg">
+                                                        <p>option 5</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter premium black wool plain summer">
+                                                        <img src="assets/img/fabric-demo/6.jpg">
+                                                        <p>option 6</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter faves green wool plain summer">
+                                                        <img src="assets/img/fabric-demo/7.jpg">
+                                                        <p>option 7</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter basic black velvet striped winter">
+                                                        <img src="assets/img/fabric-demo/8.jpg">
+                                                        <p>option 8</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter new black wool striped summer">
+                                                        <img src="assets/img/fabric-demo/9.jpg">
+                                                        <p>option 9</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                      <div class=" filter new blue wool plain yearRound">
+                                                        <img src="assets/img/fabric-demo/10.jpg">
+                                                        <p>option 10</p>
+                                                        <p>$200</p>
+                                                      </div>
+                                                    <!-- END GRID -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                </div>                                               
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<!--start Footer area -->
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4>Customize</h4>
+                            <ul>
+                                <li><a href="#">Suits</a></li>
+                                <li><a href="#">Shirts</a></li>
+                                <li><a href="#">Blazers</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="#">About Blueknot</a></li>
+                                <li><a href="#">How it Works</a></li>
+                                <li><a href="#">Why Custom</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4>Help Center</h4>
+                            <ul>
+                                <li><a href="contact.php">Contact</a></li>
+                                <li><a href="#">Shipping/ Delivery</a></li>
+                                <li><a href="#">Altertions/ Returns</a></li>
+                                <li><a href="#">Gift Card</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Join our mail list to receive $25 off your fist suits</h4>
+                    <div class="email-subscription-form">
+                        <form action="index.html">
+                            <input type="email" placeholder="Email Address">
+                            <input type="submit" value="Sign Up">
+                        </form>
+                    </div>
+                    
+                    <h4>Follow us</h4>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i> Linkdin</a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Designed by MakeHub, Developed by MakeHub 2019
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Footer area -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="js/vueApp.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="assets/js/modalfilter.js"></script>
+    <script src="assets/js/main.js"></script>
+     <!--    <script src="assets/js/perfect-scrollbar.min.js"></script>-->
+
+
+</body>
+
+</html>

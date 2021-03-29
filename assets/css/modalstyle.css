@@ -80,4 +80,8 @@
     box-shadow: 5px 0 5px 0 rgb(0 0 0 / 16%), 5px 0 10px 0 rgb(0 0 0 / 12%);
   }
 
+  .modal::-webkit-scrollbar{
+      width: 15px;
+  }
+
     

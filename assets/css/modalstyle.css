@@ -60,10 +60,24 @@
     width: 100%;
   }
   
-  #mymodal2 { 
-    max-width: 880%;
+  .modal{
+    width: 500px;
+  }
+  .modal-dialog{
+    width: 500px;
+  }
+  .modalpullRight{
+    top:0;
+    left:500px !important;
+    margin:0;
   }
 
-  .modalpullRight{
-    margin-left: 500px;
+  .modal-backdrop.show{
+    opacity: 0;
   }
+
+  #exampleModal{
+    box-shadow: 5px 0 5px 0 rgb(0 0 0 / 16%), 5px 0 10px 0 rgb(0 0 0 / 12%);
+  }
+
+    

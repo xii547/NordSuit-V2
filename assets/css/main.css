@@ -1030,6 +1030,15 @@ Testimonial CSS
 .single-product-content {
   padding: 15px; }
 
+
+
+
+  /* modal css */
+.modal button.close {
+  font-size: 40px !important;
+  margin: 0 2.5rem  !important;
+  padding: 0 !important;
+}
 .modal.left .modal-dialog {
     position:absolute;
     top:0;
@@ -1037,23 +1046,20 @@ Testimonial CSS
     margin:0;
 }
   
-.modal.left .modal-dialog.modal-sm {
+/* .modal.left .modal-dialog.modal-sm {
     max-width:500px;
-}
+} */
   
 .modal.left .modal-content{
     min-height:100vh;
     border:0;
 }
 
-.containerModal{
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.filterModal{
+
+/* .filterModal{
   flex: 40%;
-}
+}  */
 .filter-options{
   display: flex;
   flex-wrap: wrap;
@@ -1098,7 +1104,7 @@ Testimonial CSS
   width: 100%;
 }
 
-.modalpullRight{
-  margin-left: 50%;
+#mymodal2 { 
+  margin-left: 33%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,10 +10,16 @@ $('.modalFilterbtn').click(function(){
 })
 $(".modalFilterbtn,#modalclose2").click(function(){
     // $(".fabricModal").addClass("bd-example-modal-lg");
-    $(".modal-content-1").toggleClass("modalpullRight");
+    $(".modalpull").toggleClass("modalpullRight");
     // $(".modal-dialog").addClass("modal-lg");
     // $(".modal-dialog").toggleClass("modal-lg");
 });
+
+$("#modalclose1").click(function(){
+  $('#mymodal2').modal('hide');
+  $(".modalpull").removeClass("modalpullRight");
+});
+
 
 var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
 var allRadio = document.querySelectorAll('input[type=radio]');
@@ -56,4 +62,16 @@ function setVisibility() {
       el.style.display = 'none';
     }
   });
+}
+
+function filterreset(el) {
+  var items = document.getElementsByClassName('checkitem');
+  var imgitems = document.getElementsByClassName('filter');
+  for (var i = 0; i < items.length; i++) {
+      if (items[i].type == 'checkbox' || items[i].type == 'radio'  )
+          items[i].checked = false;
+  }
+  for (var j = 0; j < imgitems.length; j++) {
+    imgitems[j].style.display = 'block'; 
+ }
 }

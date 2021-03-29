@@ -61,5 +61,9 @@
   }
   
   #mymodal2 { 
-    margin-left: 33%;
+    max-width: 880%;
+  }
+
+  .modalpullRight{
+    margin-left: 500px;
   }

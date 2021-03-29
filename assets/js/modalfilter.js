@@ -10,7 +10,7 @@ $('.modalFilterbtn').click(function(){
 })
 $(".modalFilterbtn").click(function(){
     // $(".fabricModal").addClass("bd-example-modal-lg");
-    $(".modal-content-1").toggleClass("modalpullRight");
+    // $(".modal-content-1").toggleClass("modalpullRight");
     // $(".modal-dialog").addClass("modal-lg");
     // $(".modal-dialog").toggleClass("modal-lg");
 });

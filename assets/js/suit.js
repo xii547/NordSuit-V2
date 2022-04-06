@@ -111,7 +111,7 @@ var Owl = {
         $('.backCarousel').hide().removeClass('activeC')
         $('.frontCarousel').show().addClass('activeC')
         $('#owlPrev').show()
-
+        app.modalFunction()
         $('.owlSubmit').show()
         $('.updateC').hide()
         $('.updateF').prop('checked', false)

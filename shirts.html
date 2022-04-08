@@ -28,43 +28,27 @@
                             <li class="progressType1 active" data="0">
                                 <a href="#">
                                     <span class="bar1 bar-check active"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Fitting</span>
+                                    <span>Collar</span>
                                 </a>
                             </li>
                             <li class="progressType2 " data="1">
                                 <a href="#"><span class="bar2 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Rise</span></a>
+                                    <span>Sleeve</span></a>
                             </li>
                             <li class="progressType3 " data="2">
                                 <a href="#"><span class="bar3 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Pant Bottom</span></a>
+                                    <span>Cuff</span></a>
                             </li>
                             <li class="progressType4 " data="3">
                                 <a href="#"><span class="bar4 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Pleat</span></a>
+                                    <span>Tuck</span></a>
                             </li>
                             <li class="progressType5 " data="4">
                                 <a href="#"><span class="bar5 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Fastening</span></a>
+                                    <span>Chest Pocket</span></a>
                             </li>
                             <li class="progressType6 " data="5">
                                 <a href="#"><span class="bar6 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Back Pocket</span></a>
-                            </li>                           
-                            <li class="progressType7 " data="6">
-                                <a href="#"><span class="bar7 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Side Pocket</span></a>
-                            </li>
-                            <li class="progressType8 " data="7">
-                                <a href="#"><span class="bar8 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Cuff</span></a>
-                            </li>
-                            <li class="progressType9 " data="8">
-                                <a href="#"><span class="bar9 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
-                                    <span>Suspender Button</span></a>
-                            </li>
-                            <li class="progressType10 " data="9">
-                                <a href="#"><span class="bar10 bar-check"><i class="fa fa-check" aria-hidden="true"></i></span>
                                     <span>Your Selection</span></a>
                             </li>
                         </ul>
@@ -96,7 +80,6 @@
                     </button>
                     <a class="selectionSite" href="index.html">Change Product</a>
 
-
                     <!-- Modal -->
                     <div class="modal fade" id="Mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
@@ -119,41 +102,25 @@
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <td>Fittings</td>
-                                            <td>{{ fittingPicked }}</td>
+                                            <td>Collar</td>
+                                            <td>{{ collarPicked }}</td>
                                           </tr>
                                           <tr>
-                                            <td>Rise</td>
-                                            <td>{{ risePicked }}</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Pant Bottom</td>
-                                            <td>{{ pantbottomPicked }}</td>
-                                          </tr>                                          
-                                          <tr>
-                                            <td>Pleats</td>
-                                            <td>{{ pleatPicked }}</td>
-                                          </tr>                                          
-                                          <tr>
-                                            <td>Fastening</td>
-                                            <td>{{ fasteningPicked }}</td>
-                                          </tr>                                          
-                                          <tr>
-                                            <td>Back Pockets</td>
-                                            <td>{{ backpocketPicked }}</td>
-                                          </tr>                                          
-                                          <tr>
-                                            <td>Side pockets</td>
-                                            <td>{{ sidepocketPicked }}</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Cuffs</td>
+                                            <td>Cuff</td>
                                             <td>{{ cuffPicked }}</td>
                                           </tr>
                                           <tr>
-                                            <td>Suspender Buttons</td>
-                                            <td>{{ suspenderbuttonPicked }}</td>
-                                          </tr>
+                                            <td>Sleeves</td>
+                                            <td>{{ sleevePicked }}</td>
+                                          </tr>                                          
+                                          <tr>
+                                            <td>Tucking</td>
+                                            <td>{{ tuckPicked }}</td>
+                                          </tr>                                          
+                                          <tr>
+                                            <td>Chest Pocket</td>
+                                            <td>{{ chestpocketPicked }}</td>
+                                          </tr>                                          
                                         </tbody>
                                   </table>
                             </div>
@@ -173,16 +140,16 @@
                 <div class="col-lg-6 offset-lg-1">
                     <div class="customization-slide owl-carousel owlCarousel" id="myCarousel"> 
                         <div  class="customization-content">
-                            <div class="ctitle"><strong>Fittings</strong></div>
+                            <div class="ctitle"><strong>Collars</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
-                                <label class="single-item-box"  v-for="variant in fittingvariants"
+                                <label class="single-item-box"  v-for="variant in collarvariants"
                                                                                                 :key="variant.variantId">
 
 
-                                        <div class="box" id="jfitting"  @click="updateProduct(variant.variantId) " >
+                                        <div class="box" id="jcollar"  @click="updateProduct(variant.variantId) " >
 
-                                            <input type="radio" name="fitting" :id="variant.variantId" class="Ftvariant" :value="variant.variantType" >
+                                            <input type="radio" name="collar" :id="variant.variantId" class="CLvariant" :value="variant.variantType" >
 
                                             <div class="box1">
 
@@ -202,46 +169,15 @@
                         </div>
 
                         <div  class="customization-content">
-                            <div class="ctitle"><strong>Rise</strong></div>
+                            <div class="ctitle"><strong>Sleeves</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
-                            <label  class="single-item-box"  v-for="variant in risevariants"
-                                                                                            :key="variant.variantId">
-
-
-
-                                    <div class="box" id="jrise" @click="updateProduct(variant.variantImage) " >
-
-                                        <input type="radio" name="rise" :id="variant.variantId" class="Rsvariants" :value="variant.variantType" >
-
-                                        <div class="box1">   
-
-                                        <div class="single-item-img">
-                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                        </div>
-                                        <div class="single-content">
-                                            <p class="op-title">{{ variant.variantType }}</p>
-                                            <p class="op-text">The choice for formal-wear.</p>
-                                        </div>
-
-                                        </div>
-
-                                    </div>
-                            </label>
-
-                            </div>
-                        </div>                    
-
-                        <div  class="customization-content">
-                            <div class="ctitle"><strong>Pant Bottom</strong></div>
-                            <hr>
-                            <div class="customization-box clearfix" >
-                            <label  class="single-item-box"  v-for="variant in pantbottomvariants"
+                            <label  class="single-item-box"  v-for="variant in sleevevariants"
                                                                                             :key="variant.variantId" >
 
 
-                                    <div class="box" id="jpantbottom" @click="updateProduct(variant.variantImage) " >
-                                        <input type="radio" name="pantbottom" class="PBvariants" :id="variant.variantId" :value = "variant.variantType">
+                                    <div class="box" id="jsleeve" @click="updateProduct(variant.variantImage) " >
+                                        <input type="radio" name="sleeve" class="SVvariants" :id="variant.variantId" :value = "variant.variantType">
 
                                         <div class="box1">
 
@@ -262,14 +198,45 @@
                         </div>
 
                         <div  class="customization-content">
-                            <div class="ctitle"><strong>Pleats</strong></div>
+                            <div class="ctitle"><strong>Cuffs</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
-                            <label  class="single-item-box"  v-for="variant in pleatvariants"
+                            <label  class="single-item-box"  v-for="variant in cuffvariants"
                                                                                             :key="variant.variantId">
 
-                                    <div class="box" id="jpleat" @click="updateProduct(variant.variantImage) " >
-                                        <input type="radio" name="pleat" class="PTvariant" :id="variant.variantId" :value = "variant.variantType">
+
+
+                                    <div class="box" id="jcuff" @click="updateProduct(variant.variantImage) " >
+
+                                        <input type="radio" name="cuff" :id="variant.variantId" class="CFvariants" :value="variant.variantType" >
+
+                                        <div class="box1">   
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div>                    
+
+                        <div  class="customization-content">
+                            <div class="ctitle"><strong>How do you wear your shirt?</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in tuckvariants"
+                                                                                            :key="variant.variantId">
+
+                                    <div class="box" id="jtuck" @click="updateProduct(variant.variantImage) " >
+                                        <input type="radio" name="tuck" class="TCvariant" :id="variant.variantId" :value = "variant.variantType">
 
                                         <div class="box1">
 
@@ -292,14 +259,14 @@
                         <!-- end customization content div-->
 
                         <div  class="customization-content">
-                            <div class="ctitle"><strong>Fastening</strong></div>
+                            <div class="ctitle"><strong>Chest Pocket</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
-                            <label  class="single-item-box"  v-for="variant in fasteningvariants"
+                            <label  class="single-item-box"  v-for="variant in chestpocketvariants"
                                                                                             :key="variant.variantId">
 
-                                    <div class="box" id="jfastening" @click="updateProduct(variant.variantImage) " >
-                                        <input type="radio" name="fastening" class="FGvariant" :id="variant.variantId" :value = "variant.variantType">
+                                    <div class="box" id="jchestpocket" @click="updateProduct(variant.variantImage) " >
+                                        <input type="radio" name="chestpocket" class="CPvariant" :id="variant.variantId" :value = "variant.variantType">
 
                                         <div class="box1">
 
@@ -319,120 +286,6 @@
                             </div>
                         </div>
 
-                        <div  class="customization-content">
-                            <div class="ctitle"><strong>Back Pocket</strong></div>
-                            <hr>
-                            <div class="customization-box clearfix" >
-                                <label class="single-item-box"  v-for="variant in backpocketvariants"
-                                                                                                :key="variant.variantId">
-
-
-                                        <div class="box" id="jbackpocket"  @click="updateProduct(variant.variantImage) " >
-
-                                            <input type="radio" name="backpocket" class="BPvariant" :id="variant.variantId" :value = "variant.variantType">
-
-                                            <div class="box1">
-
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ variant.variantType }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                </label>
-
-                            </div>
-                        </div>
-
-
-                        <div  class="customization-content">
-                            <div class="ctitle"><strong>Side Pocket</strong></div>
-                            <hr>
-                            <div class="customization-box clearfix" >
-                                <label class="single-item-box"  v-for="variant in sidepocketvariants"
-                                                                                                :key="variant.variantId">
-
-
-                                        <div class="box" id="jsidepocket"  @click="updateProduct(variant.variantImage) " >
-
-                                            <input type="radio" name="sidepocket" class="SPvariant" :id="variant.variantId" :value = "variant.variantType">
-
-                                            <div class="box1">
-
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ variant.variantType }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                </label>
-
-                            </div>
-                        </div>  
-                        <div  class="customization-content">
-                            <div class="ctitle"><strong>Cuffs</strong></div>
-                            <hr>
-                            <div class="customization-box clearfix" >
-                                <label class="single-item-box"  v-for="variant in cuffvariants"
-                                                                                                :key="variant.variantId">
-
-
-                                        <div class="box" id="jcuff"  @click="updateProduct(variant.variantImage) " >
-
-                                            <input type="radio" name="cuff" class="CFvariant" :id="variant.variantId" :value = "variant.variantType">
-
-                                            <div class="box1">
-
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ variant.variantType }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                </label>
-
-                            </div>
-                        </div> 
-                        <div  class="customization-content">
-                            <div class="ctitle"><strong>Suspender Buttons</strong></div>
-                            <hr>
-                            <div class="customization-box clearfix" >
-                                <label class="single-item-box"  v-for="variant in suspenderbuttonvariants"
-                                                                                                :key="variant.variantId">
-
-
-                                        <div class="box" id="jsuspenderbutton"  @click="updateProduct(variant.variantImage) " >
-
-                                            <input type="radio" name="suspenderbutton" class="SBvariant" :id="variant.variantId" :value = "variant.variantType">
-
-                                            <div class="box1">
-
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ variant.variantType }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-
-                                            </div>
-                                        </div>
-                                </label>
-
-                            </div>
-                        </div> 
                     <!--  customization end  -->
 
                         <div  class="customization-content">
@@ -440,112 +293,38 @@
                             <hr>
                             <div class="customization-box clearfix" >
                                 <label class="single-item-box" >
-                                    <div class="box" id="fittingFinal"  data="0">
-                                        <input type="radio" name="updateF" id="fittingF" class="updateF" :value = "fittingPicked">
+                                    <div class="box" id="collarFinal"  data="0">
+                                        <input type="radio" name="updateF" id="collarF" class="updateF" :value = "collarPicked">
                                         <div class="box1">
                                             <div class="single-item-img">
                                                 <img src="./assets/img/line-arts/04.jpg" alt="One Button">
                                             </div>
                                             <div class="single-content">
-                                                <p class="op-title">{{ fittingPicked }}</p>
+                                                <p class="op-title">{{ collarPicked }}</p>
                                                 <p class="op-text">The choice for formal-wear.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </label> 
 
-                                <label class="single-item-box"  data="1">
-                                    <div class="box" id="riseFinal"  >
-                                        <input type="radio" name="updateF" id="riseF" class="updateF"  :value = "risePicked">
+                                <label class="single-item-box" data="1">
+                                    <div class="box" id="sleeve"  >
+                                        <input type="radio" name="updateF" id="sleeveF" class="updateF"  :value = "sleevePicked">
                                         <div class="box1">
                                             <div class="single-item-img">
                                                 <img src="./assets/img/line-arts/04.jpg" alt="One Button">
                                             </div>
                                             <div class="single-content">
-                                                <p class="op-title">{{ risePicked }}</p>
+                                                <p class="op-title">{{ sleevePicked }}</p>
                                                 <p class="op-text">The choice for formal-wear.</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>        
+                                </label>  
 
-                                <label class="single-item-box" data="2">
-                                    <div class="box" id="pantbottom"  >
-                                        <input type="radio" name="updateF" id="pantbottomF" class="updateF"  :value = "pantbottomPicked">
-                                        <div class="box1">
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ pantbottomPicked }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>          
-
-                                <label class="single-item-box" data="3">
-                                    <div class="box" id="pleatFinal"  >
-                                        <input type="radio" name="updateF" id="pleatF" class="updateF"  :value = "pleatPicked">
-                                        <div class="box1">
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ pleatPicked }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>                                       
-
-                                <label class="single-item-box" data="4">
-                                    <div class="box" id="fasteningFinal"  >
-                                        <input type="radio" name="updateF" id="fasteningF" class="updateF"  :value = "fasteningPicked">
-                                        <div class="box1">
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ fasteningPicked }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>                                     
-
-                                <label class="single-item-box" data="5">
-                                    <div class="box" id="backpocketFinal"  >
-                                        <input type="radio" name="updateF" id="backpocketF" class="updateF"   :value = "backpocketPicked">
-                                        <div class="box1">
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ backpocketPicked }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>                                       
-
-                                <label class="single-item-box" data="6">
-                                    <div class="box" id="sidepocket"  >
-                                        <input type="radio" name="updateF" id="sidepocketF" class="updateF"   :value = "sidepocketPicked">
-                                        <div class="box1">
-                                            <div class="single-item-img">
-                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
-                                            </div>
-                                            <div class="single-content">
-                                                <p class="op-title">{{ sidepocketPicked }}</p>
-                                                <p class="op-text">The choice for formal-wear.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>     
-                                <label class="single-item-box" data="7">
-                                    <div class="box" id="cuff"  >
-                                        <input type="radio" name="updateF" id="cuffF" class="updateF"   :value = "cuffPicked">
+                                <label class="single-item-box"  data="2">
+                                    <div class="box" id="cuffFinal"  >
+                                        <input type="radio" name="updateF" id="cuffF" class="updateF"  :value = "cuffPicked">
                                         <div class="box1">
                                             <div class="single-item-img">
                                                 <img src="./assets/img/line-arts/04.jpg" alt="One Button">
@@ -556,21 +335,38 @@
                                             </div>
                                         </div>
                                     </div>
-                                </label>  
-                                <label class="single-item-box" data="8">
-                                    <div class="box" id="suspenderbutton"  >
-                                        <input type="radio" name="updateF" id="suspenderbuttonF" class="updateF"   :value = "suspenderbuttonPicked">
+                                </label>        
+
+
+                                <label class="single-item-box" data="3">
+                                    <div class="box" id="tuckFinal"  >
+                                        <input type="radio" name="updateF" id="tuckF" class="updateF"  :value = "tuckPicked">
                                         <div class="box1">
                                             <div class="single-item-img">
                                                 <img src="./assets/img/line-arts/04.jpg" alt="One Button">
                                             </div>
                                             <div class="single-content">
-                                                <p class="op-title">{{ suspenderbuttonPicked }}</p>
+                                                <p class="op-title">{{ tuckPicked }}</p>
                                                 <p class="op-text">The choice for formal-wear.</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>  
+                                </label>                                       
+
+                                <label class="single-item-box" data="4">
+                                    <div class="box" id="chestpocketFinal"  >
+                                        <input type="radio" name="updateF" id="chestpocketF" class="updateF"  :value = "chestpocketPicked">
+                                        <div class="box1">
+                                            <div class="single-item-img">
+                                                <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                            </div>
+                                            <div class="single-content">
+                                                <p class="op-title">{{ chestpocketPicked }}</p>
+                                                <p class="op-text">The choice for formal-wear.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>                                     
                           </div>
                         </div>
 
@@ -615,45 +411,29 @@
                             <div  id="frontImg" class="activeC frontCarousel cDisplay">
                                 <div class="modelFront">
                                     <img class="modelHead modelImg"src="imge/front/carlos.png">
-                                    <img class="modelImg" src="imge/front/shirt_to_pants.png">
-                                    <img class="modelPant modelImg" src="">
+                                    <img class="modelImg" src="">
+                                    <img class="modelPant modelImg" src="imge/front/pants.png">
                                     <img class="modelShoe modelImg" src="imge/front/zapatos.png">
 
                                 </div>
-                                <div class="fitting">
-                                    <img class="modelImg modelPant" :src="fitting">
-                                    <!-- <img class="modelImg" style="display: none;" :src= "stylesx"> -->
+                                <div class="collar">
+                                    <img class="modelImg" :src="collar">
                                 </div>  
 
-                                <div class="rise ">
-                                    <img class="modelImg modelPant" :src="rise">
+                                <div class="cuff">
+                                    <img class="modelImg  " :src="cuff">
                                 </div>
 
-                                <div class="pantbottom">
-                                    <img class="modelImg modelPant" class="modelImg" :src="pantbottom">
+                                <div class="sleeve">
+                                    <img class="modelImg " class="modelImg" :src="sleeve">
                                 </div>
 
-                                <div class="pleat">
-                                    <img class="modelImg modelPant" :src="pleat">
+                                <div class="tuck">
+                                    <img class="modelImg" :src="tuck">
                                 </div>      
                                 
-                                <div class="fastening">
-                                    <img class="modelImg modelPant" :src="fastening">
-                                </div>  
-
-                                <div class="backpocket">
-                                    <img class="modelImg modelPant" :src="backpocket">
-                                </div>  
-
-                                <div class="sidepocket">
-                                    <img class="modelImg modelPant" :src="sidepocket">
-                                    <!-- <img class="modelImg" :src="pocketsx"> -->
-                                </div>  
-                                <div class="cuff">
-                                    <img class="modelImg modelPant" :src="cuff">
-                                </div>  
-                                <div class="suspenderbutton ">
-                                    <img class="modelImg modelPant" :src="suspenderbutton">
+                                <div class="chestpocket">
+                                    <img class="modelImg" :src="chestpocket">
                                 </div>  
                             </div>
 
@@ -664,20 +444,18 @@
 
                                 <div class="modelBack">
                                     <img class="modelBImg modelHead" src="imge/back/carlos.png">
-                                    <img class="modelBImg " src="imge/back/shirt_to_pants.png">
+                                    <img class="modelBImg " src="imge/shirt/back/tuck/fit_fit+inside.png">
                                     <img class="modelBImg modelShoe" src="imge/back/zapatos.png">
-                                    <img class="modelBImg modelPant" src="">
+                                    <img class="modelBImg modelPant" src="imge/back/length_long+cut_regular.png">
                                 </div>
-                                <div class="bfitting">
-                                    <img class="modelBImg modelPant" :src="bfitting">
+                                <div class="bcollar">
+                                    <img class="modelBImg" :src="bcollar">
                                 </div>
-
-                                <div class="bpockets">
-                                    <img class="modelBImg modelPant" :src="backpocket">
-                                </div>
-
+                                <div class="btuck">
+                                    <img class="modelImg" :src="btuck">
+                                </div>   
                                 <div class="bcuffs">
-                                    <img class="modelBImg modelPant" :src="bcuff">
+                                    <img class="modelBImg" :src="bcuff">
                                 </div>  
                             </div>
                         </div>
@@ -952,11 +730,11 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
     <script src="assets/js/jquery.sticky.js"></script>
-    <script src="assets/js/vueAppPant.js"></script>
+    <script src="assets/js/vueAppShirt.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="assets/js/modalfilter.js"></script>
-    <script src="assets/js/pant.js"></script>
+    <script src="assets/js/shirt.js"></script>
      <!--    <script src="assets/js/perfect-scrollbar.min.js"></script>-->
 
 

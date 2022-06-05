@@ -1,18 +1,12 @@
-
-        $(document).ready(function() {
-        
-            var totalSteps = 4;
-
-$('#myCarousel').carousel();
-$('#myCarousel').on('slide.bs.carousel', function (e) {
-  
-  //update progress
-  var step = $(e.relatedTarget).data('step');
-  var percent = (parseInt(step) / totalSteps) * 100;
-  
-  $('.progress-bar').css({width: percent + '%'});
-  $('.progress-bar').text("Step " + step);
-  
-})
-        
-        });
+// $('.accentVButton').click(function () {
+//   $('#myCarousel').addClass('owl-hidden')
+//   $('#myCarousel').removeClass('owl-loaded')
+//   $('#myCarousel2').removeClass('owl-hidden')
+//   $('#myCarousel2').addClass('owl-loaded')
+// })
+// $('.styleVButton').click(function () {
+//   $('#myCarousel2').addClass('owl-hidden')
+//   $('#myCarousel2').removeClass('owl-loaded')
+//   $('#myCarousel').removeClass('owl-hidden')
+//   $('#myCarousel').addClass('owl-loaded')
+// })

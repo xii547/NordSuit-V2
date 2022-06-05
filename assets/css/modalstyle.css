@@ -1,87 +1,85 @@
-  /* modal css */
-  .modal button.close {
-    font-size: 40px !important;
-    margin: 0 2.5rem  !important;
-    padding: 0 !important;
-  }
-  .modal.left .modal-dialog {
-      position:absolute;
-      top:0;
-      left:0;
-      margin:0;
-  }
-    
-  .modal.left .modal-content{
-      min-height:100vh;
-      border:0;
-  }
-  
-  .filter-options{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .filter-options > div{
-    flex: 50%;
-  }
-  .filterModal label{
-    padding: 0 15px;
-  }
-  
-  .modalmainContainer{
-    flex: 60%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .filter{
-    width: 33%;
-    padding: 0 5px;
-  }
-  .filter p{
-    margin: 0px;
-  }
-  .filter img{
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-  }
-  .modal-header{
-    padding: 1rem 0  0 1rem;
-  }
-  
-  .modalFilterbtn{
-    text-align: center;
-  }
-  .modal-body {
-    max-height: 100vh;
-    overflow-y: auto;
-  }
-  .modal-footer{
-    width: 100%;
-  }
-  
-  .modal{
-    width: 500px;
-  }
-  .modal-dialog{
-    width: 500px;
-  }
-  .modalpullRight{
-    top:0;
-    left:500px !important;
-    margin:0;
-  }
+/* modal css */
+.modal button.close {
+  font-size: 40px !important;
+  margin: 0 2.5rem !important;
+  padding: 0 !important;
+}
+.modal.left .modal-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
 
-  .modal-backdrop.show{
-    opacity: 0;
-  }
+.modal.left .modal-content {
+  min-height: 100vh;
+  border: 0;
+}
 
-  #exampleModal{
-    box-shadow: 5px 0 5px 0 rgb(0 0 0 / 16%), 5px 0 10px 0 rgb(0 0 0 / 12%);
-  }
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+.filter-options > div {
+  flex: 50%;
+}
+.filterModal label {
+  padding: 0 15px;
+}
 
-  .modal::-webkit-scrollbar{
-      width: 15px;
-  }
+.modalmainContainer {
+  flex: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    
+.filter {
+  width: 33%;
+  padding: 0 5px;
+}
+.filter p {
+  margin: 0px;
+}
+.filter img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+}
+.modal-header {
+  padding: 1rem 0 0 1rem;
+}
+
+.modalFilterbtn {
+  text-align: center;
+}
+.modal-body {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.modal-footer {
+  width: 100%;
+}
+
+.modal {
+  width: 500px;
+}
+.modal-dialog {
+  width: 500px;
+}
+.modalpullRight {
+  top: 0;
+  left: 500px !important;
+  margin: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 0;
+}
+
+.exampleModal {
+  box-shadow: 5px 0 5px 0 rgb(0 0 0 / 16%), 5px 0 10px 0 rgb(0 0 0 / 12%);
+}
+
+.modal::-webkit-scrollbar {
+  width: 15px;
+}

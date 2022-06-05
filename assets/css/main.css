@@ -1242,4 +1242,7 @@ Testimonial CSS
   padding: 15px;
 }
 
+.owl-hidden {
+  display: none !important;
+}
 /*# sourceMappingURL=main.css.map */

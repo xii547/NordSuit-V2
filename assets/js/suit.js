@@ -10,7 +10,7 @@ var Owl = {
     var el = document.getElementsByClassName('owl-item')
     var elBtn = document.getElementsByClassName('owlPrev')
     $(document).ready(function () {
-      owl = $('.owlCarousel').owlCarousel({
+      owl = $('.owlCarousel1').owlCarousel({
         items: 1,
         center: true,
         nav: false,

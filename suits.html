@@ -79,6 +79,12 @@
                 <div class="col-lg-5">
                     <!-- current selected design details -->
 
+                    <button type="button" class="btn btn-primary customModal accentVButton" data-toggle="slider">
+                      Accents
+                    </button>
+                    <button type="button" class="btn btn-primary customModal styleVButton" data-toggle="slider">
+                      Style
+                    </button>
                     <button type="button" class="btn btn-primary customModal" data-toggle="modal" data-target="#Mymodal" @click="modalFunction()">
                       Your Current Customization
                     </button>
@@ -149,8 +155,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 offset-lg-1">
-                    <div class="customization-slide owl-carousel owlCarousel" id="myCarousel"> 
-                        <div  class="customization-content">
+                    <div class="customization-slide owl-carousel owlCarousel1 owl-loaded" id="myCarousel"> 
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jakect Type</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -178,11 +184,9 @@
 
                             </div>
                         </div>
-
-
                         <!-- end customization content div-->
 
-                        <div  class="customization-content">
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jakect Lapels</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -215,7 +219,7 @@
 
                         <!-- end customization content div-->                        
 
-                        <div  class="customization-content">
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jakect Fittings</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -244,10 +248,9 @@
                             </div>
                         </div>
 
-
                         <!-- end customization content div-->
 
-                        <div  class="customization-content">
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jacket Breast Pockets</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -274,10 +277,9 @@
                             </div>
                         </div>
 
-
                         <!-- end customization content div-->
 
-                        <div  class="customization-content">
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jakect Pockets</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -305,12 +307,9 @@
                             </div>
                         </div>
 
-
                         <!-- end customization content div-->
 
-
-
-                        <div  class="customization-content">
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jakect Sleeve Buttons</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -340,7 +339,7 @@
                         </div>
 
 
-                        <div  class="customization-content">
+                        <div  class="customization-content styleContent">
                             <div class="ctitle"><strong>Jakect Vents</strong></div>
                             <hr>
                             <div class="customization-box clearfix" >
@@ -367,8 +366,8 @@
                                 </label>
 
                             </div>
-                        </div>     
-                                                    
+                        </div> 
+                                                  
                         <div  class="customization-content">
                             <div class="ctitle"><strong>Your Selection</strong></div>
                             <hr>
@@ -482,32 +481,74 @@
 
 
                     </div>
+                    <!-- <div class="customization-slide owl-carousel owlCarousel2 owl-hidden" id="myCarousel2"> 
+                        <div  class="customization-content accentContent">
+                            <div class="ctitle"><strong>Internal Lining</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in iliningvariants"
+                                                                                            :key="variant.variantId">
 
 
 
+                                    <div class="box" id="jilining" @click="updateProduct(variant.variantImage) " >
 
-                <!-- carousel end -->
+                                        <input type="radio" name="ilining" :id="variant.variantId" class="ILvariant" :value="variant.variantType" >
 
+                                        <div class="box1">   
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div> 
+
+                        <div  class="customization-content accentContent">
+                            <div class="ctitle"><strong>Buttons</strong></div>
+                            <hr>
+                            <div class="customization-box clearfix" >
+                            <label  class="single-item-box"  v-for="variant in accentbuttonvariants"
+                                                                                            :key="variant.variantId">
+
+
+
+                                    <div class="box" id="jaccentbutton" @click="updateProduct(variant.variantImage) " >
+
+                                        <input type="radio" name="accentbutton" :id="variant.variantId" class="ABvariant" :value="variant.variantType" >
+
+                                        <div class="box1">   
+
+                                        <div class="single-item-img">
+                                            <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                        </div>
+                                        <div class="single-content">
+                                            <p class="op-title">{{ variant.variantType }}</p>
+                                            <p class="op-text">The choice for formal-wear.</p>
+                                        </div>
+
+                                        </div>
+
+                                    </div>
+                            </label>
+
+                            </div>
+                        </div>                                             
+                    </div> -->
                     <button class="owlPrev owlBtn  btn btn-primary" id="owlPrev">Prev</button>
                     <button class="owlNext owlBtn btn btn-primary" id="owlNext">Next</button>
                     <button type="submit " class="owlSubmit owlBtn btn btn-primary" id="owlSubmit"> Finalize Your Customization</button>
                     <button class="owlUpdate owlBtn btn btn-primary " id="owlUpdate">Update</button>
                     <button class="updateC owlBtn btn btn-primary " id="updateC">Update</button>
-
-
-                <!-- PROGRESS BAR (experimental) -->
-
-<!--                     <div class="row">
-                        
-                        <div class="progress" style="width: 100%">
-                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="5" style="width: 14.28%;">
-                             </div>
-                        </div>
-
-                    </div> -->
-
-
-
                 </div>
                 <div class="col-lg-5">
                     <div class="ct-preview-box clearfix">
@@ -608,7 +649,7 @@
                             <!-- fabric Modal -->
 
 
-                            <div class="modal left fade bd-example-modal-lg modalpull" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal left fade bd-example-modal-lg modalpull exampleModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog"  role="document">
                                     <div class="modal-content ">
                                         <div class="modal-header">
@@ -677,97 +718,132 @@
                                                 </div>                                               
                                             <!-- </div> -->
                                         </div>
-                                        </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="modal fade left filterModal" id="mymodal2" data-backdrop="static">
-                                    <div class="modal-dialog" style="max-width: 500px;">
-                                      <div class="modal-content">
-                                        <div class="modal-header">
-                                          <h4 class="modal-title">filter fabric</h4>
-                                          <button type="button" class="close" id="modalclose2" data-dismiss="modal" aria-hidden="true">×</button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div style="text-align: center; padding-bottom: 20px;">
-                                                <button type="button" class="modalResetbtn btn btn-secondary" onclick="filterreset()">reset</button>  
-                                            </div>
-                                            <div class="container">
-                                                <h3>Type</h3>
-                                                <div class="filter-options">
-                                                  <div><input class="checkitem" type="checkbox" name="type" value="new" id="new"><label for="new">new</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="type" value="faves" id="faves"><label for="faves">faves</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="type" value="basic" id="basic"><label for="basic">basic</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="type" value="limitedEdition" id="limitedEdition"><label for="limitedEdition">limited edition</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="type" value="premium" id="premium"><label for="premium">premium</label></div>
-                                                </div>
-                                          
-                                                <h3>Color</h3>
-                                                <div class="filter-options">
-                                                  <div><input class="checkitem" type="radio" name="color" value="black" id="black"><label for="black">black</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="blue" id="blue"><label for="blue">blue</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="grey" id="grey"><label for="grey">grey</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="brown" id="brown"><label for="brown">brown</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="white" id="white"><label for="white">white</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="beige" id="beige"><label for="beige">beige</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="yellow" id="yellow"><label for="yellow">yellow</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="pink" id="pink"><label for="pink">pink</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="green" id="green"><label for="green">green</label></div>
-                                                  <div><input class="checkitem" type="radio" name="color" value="red" id="red"><label for="red">red</label></div>
-                                                </div>
-                                          
-                                                <h3>Material</h3>
-                                                <div class="filter-options">
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="wool" id="wool"><label for="wool">wool</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="linen" id="linen"><label for="linen">linen</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="tweed" id="tweed"><label for="tweed">tweed</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="cotton" id="cotton"><label for="cotton">cotton</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="velvet" id="velvet"><label for="velvet">velvet</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="corduroy" id="corduroy"><label for="corduroy">corduroy</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="polyester" id="polyester"><label for="polyester">polyester</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="seersucker" id="seersucker"><label for="seersucker">seersucker</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="stretchy" id="stretchy"><label for="stretchy">stretchy</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="material" value="wooldBlends" id="wooldBlends"><label for="wooldBlends">woold blends</label></div>
-                                                </div>
-                                                <h3>Pattern</h3>
-                                                <div class="filter-options">
-                                                  <div><input class="checkitem" type="checkbox" name="pattern" value="plain" id="plain"><label for="plain">plainern</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="pattern" value="striped" id="striped"><label for="striped">stripedern</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="pattern" value="checked" id="checked"><label for="checked">checkedern</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="pattern" value="houndstooth" id="houndstooth"><label for="houndstooth">houndstoothern</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="pattern" value="paisley" id="paisley"><label for="paisley">paisleyern</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="pattern" value="herrington" id="herrington"><label for="herrington">herringtonern</label></div>
-                                                </div>
-                                                <h3>Season</h3>
-                                                <div class="filter-options">
-                                                  <div><input class="checkitem" type="checkbox" name="season" value="summer" id="summer"><label for="summer">summer</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="season" value="yearRound" id="yearRound"><label for="yearRound">year round</label></div>
-                                                  <div><input class="checkitem" type="checkbox" name="season" value="winter" id="winter"><label for="winter">winter</label></div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque dignissimos temporibus ratione necessitatibus soluta dicta nesciunt repellendus repudiandae ipsum saepe aliquam amet reprehenderit, quo sequi dolor maxime, voluptatibus suscipit.</p>
-                                            </div>
-                                        </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                          <a href="#" data-dismiss="modal" class="btn">Close</a>
-                                        </div>
-                                      </div>
+                            <div class="modal fade left filterModal" id="mymodal2" data-backdrop="static">
+                                <div class="modal-dialog" style="max-width: 500px;">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">filter fabric</h4>
+                                        <button type="button" class="close" id="modalclose2" data-dismiss="modal" aria-hidden="true">×</button>
                                     </div>
+                                    <div class="modal-body">
+                                        <div style="text-align: center; padding-bottom: 20px;">
+                                            <button type="button" class="modalResetbtn btn btn-secondary" onclick="filterreset()">reset</button>  
+                                        </div>
+                                        <div class="container">
+                                            <h3>Type</h3>
+                                            <div class="filter-options">
+                                                <div><input class="checkitem" type="checkbox" name="type" value="new" id="new"><label for="new">new</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="type" value="faves" id="faves"><label for="faves">faves</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="type" value="basic" id="basic"><label for="basic">basic</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="type" value="limitedEdition" id="limitedEdition"><label for="limitedEdition">limited edition</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="type" value="premium" id="premium"><label for="premium">premium</label></div>
+                                            </div>
+                                        
+                                            <h3>Color</h3>
+                                            <div class="filter-options">
+                                                <div><input class="checkitem" type="radio" name="color" value="black" id="black"><label for="black">black</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="blue" id="blue"><label for="blue">blue</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="grey" id="grey"><label for="grey">grey</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="brown" id="brown"><label for="brown">brown</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="white" id="white"><label for="white">white</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="beige" id="beige"><label for="beige">beige</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="yellow" id="yellow"><label for="yellow">yellow</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="pink" id="pink"><label for="pink">pink</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="green" id="green"><label for="green">green</label></div>
+                                                <div><input class="checkitem" type="radio" name="color" value="red" id="red"><label for="red">red</label></div>
+                                            </div>
+                                        
+                                            <h3>Material</h3>
+                                            <div class="filter-options">
+                                                <div><input class="checkitem" type="checkbox" name="material" value="wool" id="wool"><label for="wool">wool</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="linen" id="linen"><label for="linen">linen</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="tweed" id="tweed"><label for="tweed">tweed</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="cotton" id="cotton"><label for="cotton">cotton</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="velvet" id="velvet"><label for="velvet">velvet</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="corduroy" id="corduroy"><label for="corduroy">corduroy</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="polyester" id="polyester"><label for="polyester">polyester</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="seersucker" id="seersucker"><label for="seersucker">seersucker</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="stretchy" id="stretchy"><label for="stretchy">stretchy</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="material" value="wooldBlends" id="wooldBlends"><label for="wooldBlends">woold blends</label></div>
+                                            </div>
+                                            <h3>Pattern</h3>
+                                            <div class="filter-options">
+                                                <div><input class="checkitem" type="checkbox" name="pattern" value="plain" id="plain"><label for="plain">plainern</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="pattern" value="striped" id="striped"><label for="striped">stripedern</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="pattern" value="checked" id="checked"><label for="checked">checkedern</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="pattern" value="houndstooth" id="houndstooth"><label for="houndstooth">houndstoothern</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="pattern" value="paisley" id="paisley"><label for="paisley">paisleyern</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="pattern" value="herrington" id="herrington"><label for="herrington">herringtonern</label></div>
+                                            </div>
+                                            <h3>Season</h3>
+                                            <div class="filter-options">
+                                                <div><input class="checkitem" type="checkbox" name="season" value="summer" id="summer"><label for="summer">summer</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="season" value="yearRound" id="yearRound"><label for="yearRound">year round</label></div>
+                                                <div><input class="checkitem" type="checkbox" name="season" value="winter" id="winter"><label for="winter">winter</label></div>
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse neque dignissimos temporibus ratione necessitatibus soluta dicta nesciunt repellendus repudiandae ipsum saepe aliquam amet reprehenderit, quo sequi dolor maxime, voluptatibus suscipit.</p>
+                                        </div>
+                                    </div>
+
+                                        </div>
+                                    </div>
+                                <div class="modal-footer">
+                                    <a href="#" data-dismiss="modal" class="btn">Close</a>
                                 </div>
+                            </div>
+                            <div class="modal fade left accentModal exampleModal" id="mymodal3" data-backdrop="static">
+                                <div class="modal-dialog" style="max-width: 500px;">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">ACCENT</h4>
+                                        <button type="button" class="close" id="modalclose3" data-dismiss="modal" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="customization-slide owl-carousel owlCarousel1 owl-loaded" id="myCarousel"> 
+                                                <div  class="customization-content styleContent">
+                                                    <div class="ctitle"><strong>Jakect Type</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+                                                        <label class="single-item-box"  v-for="variant in stylevariants"
+                                                                                                                        :key="variant.variantId">
+
+
+                                                                <div class="box" id="jstyles"  @click="updateProduct(variant.variantId) " >
+
+                                                                    <input type="radio" name="styles" :id="variant.variantId" class="Svariant" :value="variant.variantType" >
+
+                                                                    <div class="box1">
+
+                                                                    <div class="single-item-img">
+                                                                        <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                                                    </div>
+                                                                    <div class="single-content">
+                                                                        <p class="op-title">{{ variant.variantType }}</p>
+                                                                        <p class="op-text">The choice for formal-wear.</p>
+                                                                    </div>
+
+                                                                    </div>
+                                                                </div>
+                                                        </label>
+                                                    </div>
+                                                </div>                  
+                                            </div>
 
 
 
+                                        </div>
+                                    </div>
 
-
-
-
-
-
-
-
-
+                                        </div>
+                                    </div>
+                                <div class="modal-footer">
+                                    <a href="#" data-dismiss="modal" class="btn">Close</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -775,9 +851,10 @@
             </div>
         </div>
     </div>
-
 </div>
-
+</div>
+</div>
+</div>
 </div>
 
 <!--start Footer area -->
@@ -862,6 +939,7 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="assets/js/modalfilter.js"></script>
+    <script src="assets/js/script3.js"></script>
     <script src="assets/js/suit.js"></script>
      <!--    <script src="assets/js/perfect-scrollbar.min.js"></script>-->
 

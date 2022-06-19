@@ -795,46 +795,173 @@
                                     <a href="#" data-dismiss="modal" class="btn">Close</a>
                                 </div>
                             </div>
-                            <div class="modal fade left accentModal exampleModal" id="mymodal3" data-backdrop="static">
+                            <div class="modal fade left accentModal exampleModal" id="mymodal3" style="padding-bottom: 50px;" data-backdrop="static">
                                 <div class="modal-dialog" style="max-width: 500px;">
                                     <div class="modal-content">
                                     <div class="modal-header">
                                         <h4 class="modal-title">ACCENT</h4>
-                                        <button type="button" class="close" id="modalclose3" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <button type="button" class="close" id="modalclose3" data-dismiss="modal"    aria-hidden="true">×</button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="container">
-                                            <div class="customization-slide owl-carousel owlCarousel1 owl-loaded" id="myCarousel"> 
-                                                <div  class="customization-content styleContent">
-                                                    <div class="ctitle"><strong>Jakect Type</strong></div>
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Internal Lining</strong></div>
                                                     <hr>
                                                     <div class="customization-box clearfix" >
-                                                        <label class="single-item-box"  v-for="variant in stylevariants"
+                                                        <label class="accent-item-box"  v-for="variant in iliningvariants"
                                                                                                                         :key="variant.variantId">
 
 
-                                                                <div class="box" id="jstyles"  @click="updateProduct(variant.variantId) " >
+                                                                <div class="box" id="jilining"  @click="updateProduct(variant.variantId) " >
 
-                                                                    <input type="radio" name="styles" :id="variant.variantId" class="Svariant" :value="variant.variantType" >
+                                                                    <input type="radio" name="ilining" :id="variant.variantId" class="ILinevariant" :value="variant.variantType" >
 
                                                                     <div class="box1">
 
-                                                                    <div class="single-item-img">
+                                                                    <div class="accent-item-img">
                                                                         <img src="./assets/img/line-arts/04.jpg" alt="One Button">
                                                                     </div>
-                                                                    <div class="single-content">
+                                                                    <div class="accent-content">
                                                                         <p class="op-title">{{ variant.variantType }}</p>
-                                                                        <p class="op-text">The choice for formal-wear.</p>
                                                                     </div>
 
                                                                     </div>
                                                                 </div>
                                                         </label>
                                                     </div>
-                                                </div>                  
-                                            </div>
+                                                </div>  
+                                                
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Blazer Initials (+10€)</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+
+                                                            <label for="binitial"></label>
+                                                            <input type="text" id="binitial" name="binitial" placeholder="Input Your Initial"><br><br>
+
+                                                    </div>
+                                                </div> 
+
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Font</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+                                                        <label class="accent-item-box1"  v-for="variant in afontvariants"
+                                                                                                                        :key="variant.variantId">
 
 
+                                                                <div class="box" id="jafont"  @click="updateProduct(variant.variantId) " >
+
+                                                                    <input type="radio" name="afont" :id="variant.variantId" class="afont" :value="variant.variantType" >
+
+                                                                    <div class="box1">
+
+                                                                    <div class="accent-item-img">
+                                                                        <img :src="variant.variantImage2" alt="One Button">
+                                                                    </div>
+
+                                                                    </div>
+                                                                </div>
+                                                        </label>
+                                                    </div>
+                                                </div> 
+
+
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Monogram Thread Color</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+                                                        <label class="accent-item-box1"  v-for="variant in mthreadvariants"
+                                                                                                                        :key="variant.variantId">
+
+                                                            <div class="box" id="jmthread"  @click="updateProduct(variant.variantId)">
+
+                                                                <input type="radio" name="mthread" :id="variant.variantId" class="afont" >
+                                                                <div class="box1">
+
+                                                                    <div class="accent-item-img">
+                                                                        <img style="width: 36px; height:36px;" v-bind:style="{background: variant.variantType}" :src="variant.variantImage2" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div> 
+                                        
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Buttons</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+                                                        <label class="accent-item-box"  v-for="variant in abuttonvariants"
+                                                                                                                        :key="variant.variantId">
+
+
+                                                                <div class="box" id="jabutton"  @click="updateProduct(variant.variantId) " >
+
+                                                                    <input type="radio" name="abutton" :id="variant.variantId" class="AButtonvariant" :value="variant.variantType" >
+
+                                                                    <div class="box1">
+
+                                                                    <div class="accent-item-img">
+                                                                        <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                                                    </div>
+                                                                    <div class="accent-content">
+                                                                        <p class="op-title">{{ variant.variantType }}</p>
+                                                                    </div>
+
+                                                                    </div>
+                                                                </div>
+                                                        </label>
+                                                    </div>
+                                                </div> 
+
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Button Threads/Holes</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+                                                        <label class="accent-item-box"  v-for="variant in bthreadvariants"
+                                                                                                                        :key="variant.variantId">
+
+
+                                                                <div class="box" id="jbthread"  @click="updateProduct(variant.variantId) " >
+
+                                                                    <input type="radio" name="bthread" :id="variant.variantId" class="BThreadvariant" :value="variant.variantType" >
+
+                                                                    <div class="box1">
+
+                                                                    <div class="accent-item-img">
+                                                                        <img src="./assets/img/line-arts/04.jpg" alt="One Button">
+                                                                    </div>
+                                                                    <div class="accent-content">
+                                                                        <p class="op-title">{{ variant.variantType }}</p>
+                                                                    </div>
+
+                                                                    </div>
+                                                                </div>
+                                                        </label>
+                                                    </div>
+                                                </div>                                                
+
+                                                <div  class="customization-content accentContent">
+                                                    <div class="atitle"><strong>Button Holes</strong></div>
+                                                    <hr>
+                                                    <div class="customization-box clearfix" >
+                                                        <label class="accent-item-box1"  v-for="variant in bholevariants"
+                                                                                                                        :key="variant.variantId">
+
+                                                            <div class="box" id="jbhole"  @click="updateProduct(variant.variantId)">
+
+                                                                <input type="radio" name="bhole" :id="variant.variantId" class="bhole" >
+                                                                <div class="box1">
+
+                                                                    <div class="accent-item-img">
+                                                                        <img style="width: 36px; height:36px;" v-bind:style="{background: variant.variantType}" :src="variant.variantImage2" alt="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div> 
 
                                         </div>
                                     </div>

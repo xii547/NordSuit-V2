@@ -26,7 +26,134 @@ var app = new Vue({
     pocketPicked: '',
     ilining: '',
     accentbutton: '',
-
+    afont: '',
+    mthread: '',
+    bthread: '',
+    bhole: '',
+    bholevariants: [
+      {
+        variantId: 'id1',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#ffffff',
+      },
+      {
+        variantId: 'id2',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#b3b3b3',
+      },
+      {
+        variantId: 'id3',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#000000',
+      },
+      {
+        variantId: 'id4',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#b80e58',
+      },
+      {
+        variantId: 'id5',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#0ba133',
+      },
+      {
+        variantId: 'id6',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#c20000',
+      },
+      {
+        variantId: 'id7',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#ff7912',
+      },
+      {
+        variantId: 'id8',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#5f1970',
+      },
+      {
+        variantId: 'id9',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#b8f2f2',
+      },
+      {
+        variantId: 'id10',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#4477cf',
+      },
+    ],
+    mthreadvariants: [
+      {
+        variantId: 'id1',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#ffffff',
+      },
+      {
+        variantId: 'id2',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#b3b3b3',
+      },
+      {
+        variantId: 'id3',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#000000',
+      },
+      {
+        variantId: 'id4',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#b80e58',
+      },
+      {
+        variantId: 'id5',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#0ba133',
+      },
+      {
+        variantId: 'id6',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#c20000',
+      },
+      {
+        variantId: 'id7',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#ff7912',
+      },
+      {
+        variantId: 'id8',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#5f1970',
+      },
+      {
+        variantId: 'id9',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#b8f2f2',
+      },
+      {
+        variantId: 'id10',
+        variantImage2:
+          'https://d2w9m16hs9jc37.cloudfront.net/images/threads/shadow_extras_thread.png',
+        variantType: '#4477cf',
+      },
+    ],
     iliningvariants: [
       {
         variantId: 'il1',
@@ -53,18 +180,51 @@ var app = new Vue({
           'imge/front/front/neck_double_breasted+buttons_2+lapel_medium+style_lapel_notch.png',
       },
     ],
-    accentbuttonvariants: [
+    afontvariants: [
+      {
+        variantId: 'af1',
+        variantImage2: 'imge/accent/font/bold_script.png',
+      },
+      {
+        variantId: 'af2',
+        variantImage2: 'imge/accent/font/times_roman.png',
+      },
+      {
+        variantId: 'af3',
+        variantImage2: 'imge/accent/font/block.png',
+      },
+      {
+        variantId: 'af4',
+        variantImage2: 'imge/accent/font/calligraphy.png',
+      },
+    ],
+    abuttonvariants: [
       {
         variantId: 'ab1',
         variantType: 'BY DEFAULT',
-        variantImage2:
-          'imge/front/front/neck_single_breasted+buttons_1+lapel_medium+style_lapel_notch.png',
+        variantImage2: '',
       },
       {
         variantId: 'ab2',
         variantType: 'CUSTOM',
-        variantImage2:
-          'imge/front/front/neck_single_breasted+buttons_2+lapel_medium+style_lapel_notch.png',
+        variantImage2: '',
+      },
+    ],
+    bthreadvariants: [
+      {
+        variantId: 'bt1',
+        variantType: 'BY DEFAULT',
+        variantImage2: '',
+      },
+      {
+        variantId: 'bt2',
+        variantType: 'ALL (+6€)',
+        variantImage2: '',
+      },
+      {
+        variantId: 'bt3',
+        variantType: 'LAPEL ONLY (+6€)',
+        variantImage2: '',
       },
     ],
     stylevariants: [

@@ -83,3 +83,39 @@
 .modal::-webkit-scrollbar {
   width: 15px;
 }
+
+.accent-item-img {
+  width: 100%;
+}
+
+.accent-content {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.accent-item-box {
+  width: 30%;
+  margin: 0.5%;
+}
+.accent-item-box1 {
+  width: auto;
+  margin: 0.5%;
+}
+.accent-content > .op-title {
+  font-size: 12px !important;
+  text-align: center;
+}
+.atitle {
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+.binitial {
+  font-size: 19px;
+  text-indent: 0;
+  padding: 4px 10px;
+  width: 155px;
+  border: 1px solid #999;
+  font-family: Lato;
+  font-weight: 300;
+  color: #666;
+}
